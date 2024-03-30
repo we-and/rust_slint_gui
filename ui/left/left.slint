@@ -1,0 +1,19 @@
+
+import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
+import { TabWidget } from "std-widgets.slint";
+
+import { LeftTab } from "leftpanel1.slint";
+import { LeftTab2 } from "leftpanel2.slint";
+import { LeftTab3 } from "leftpanel3.slint";
+export component Left {
+    property<color> c1: #eeeeee;
+    Rectangle {
+        background: c1;
+        VerticalLayout{
+            LeftTab {}
+            LeftTab2 {}
+            LeftTab3 {}
+            Rectangle {}
+        }
+    }
+}

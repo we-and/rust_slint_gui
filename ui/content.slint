@@ -1,0 +1,23 @@
+
+import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
+import { Left } from "left/left.slint";
+import { Right } from "right/right.slint";
+
+export component MyContent {
+    property <color> c2: #000ddd;
+    Rectangle {
+        width: 100%;
+        background: c2;
+        HorizontalLayout {
+            width: 100%;
+            alignment: start;
+            Left {
+                height: 100%;width: 310px;
+            }
+
+            Right {
+                width: 100%;
+             }
+        }
+    }
+}

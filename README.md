@@ -1,18 +1,40 @@
-This is a lightdemo showcasing Rust and Slint capabilities for making a cross-platform GUI.
+# Slint Rust Template
 
+A template for a Rust application that's using [Slint](https://slint.rs) for the user interface.
 
+## About
 
-To install and run, like any similar projects that use Rust and Slint for GUI development, you’ll need to set up your development environment with the following prerequisites:
+This template helps you get started developing a Rust application with Slint as toolkit
+for the user interface. It demonstrates the integration between the `.slint` UI markup and
+Rust code, how to trigger react to callbacks, get and set properties and use basic widgets.
 
-1. Rust Programming Language
+## Usage
 
-	•	Installation: Rust can be installed via rustup, which is Rust’s official command-line tool for managing Rust versions and associated tools. To install rustup and Rust, visit the Rust website and follow the installation instructions for your operating system: https://www.rust-lang.org/tools/install.
-	•	Version: Ensure you have the latest stable version of Rust installed to avoid compatibility issues with libraries used in the project.
+1. Install Rust by following the [Rust Getting Started Guide](https://www.rust-lang.org/learn/get-started).
+   Once this is done, you should have the ```rustc``` compiler and the ```cargo``` build system installed in your path.
+2. Install [`cargo-generate`](https://github.com/cargo-generate/cargo-generate)
+    ```
+    cargo install cargo-generate
+    ```
+3. Set up a sample project with this template
+    ```
+    cargo generate --git https://github.com/slint-ui/slint-rust-template --name my-project
+    cd my-project
+    ```
+3. Build with cargo
+    ```
+    cargo build
+    ```
+4. Run the application binary
+     ```
+     cargo run
+     ```
 
-2. Cargo
+We recommend using an IDE for development, along with our [LSP-based IDE integration for `.slint` files](https://github.com/slint-ui/slint/blob/master/tools/lsp/README.md). You can also load this project directly in [Visual Studio Code](https://code.visualstudio.com) and install our [Slint extension](https://marketplace.visualstudio.com/items?itemName=Slint.slint).
 
-	•	Overview: Cargo is Rust’s package manager and build system, automatically installed with Rust through rustup. It handles downloading and building of your project’s dependencies and compiles your project.
-	•	Usage: Verify Cargo is installed by running cargo --version in your terminal.
+## Next Steps
 
+We hope that this template helps you get started and you enjoy exploring making user interfaces with Slint. To learn more
+about the Slint APIs and the `.slint` markup language check out our [online documentation](https://slint.dev/docs).
 
-Once you have these prerequisites set up, you’ll be ready to clone the repository, navigate into the project directory, and use cargo run to compile and run the application.
+Don't forget to edit this README to replace it by yours

@@ -1,0 +1,17 @@
+
+import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
+import { TabWidget } from "std-widgets.slint";
+
+export component Right {
+    property <color> c2: #dddddd;
+    Rectangle {
+        background: c2;
+        width: 100%;
+        VerticalLayout {
+            Text {
+                text: "...";         
+        width: 400px;
+            }
+        }
+    }
+}

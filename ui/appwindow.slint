@@ -1,0 +1,91 @@
+import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
+import { MyTopMenu} from "topmenu/topmenu.slint";
+import { Right } from "right/right.slint";
+import { Left } from "left/left.slint";
+import { MyContent } from "content.slint";
+export component AppWindow inherits Window {
+    in-out property<int> counter: 42;
+    callback request-increase-value();
+    preferred-height: 600px;
+    preferred-width: 1000px;
+    VerticalLayout {
+        alignment: start;
+        MyTopMenu {
+
+        }
+       MyContent{
+       }
+    }
+}
+
+
+/*
+
+import { Button, HorizontalBox,VerticalBox, TabWidget } from "std-widgets.slint";
+import { MyTopMenu} from "topmenu/topmenu.slint";
+import { LeftTab } from "left/lefttabs.slint";
+import { LeftTab2 } from "left/lefttabs2.slint";
+import { LeftTab3 } from "left/lefttabs3.slint";
+import { Right } from "right/right.slint";
+import { Left } from "left/left.slint";
+import { MyContent } from "content.slint";
+
+
+import { TabWidget } from "std-widgets.slint";
+ component Example inherits Window {
+    width: 200px;
+    height: 200px;
+    TabWidget {
+        Tab {
+            title: "First";
+            Rectangle { background: orange; }
+        }
+        Tab {
+            title: "Second";
+            Rectangle { background: pink; }
+        }
+    }
+}
+
+export component AppWindow inherits Window {
+    in-out property<int> counter: 42;
+    callback request-increase-value();
+
+    Example {}
+}
+
+
+export component AppWindow1 inherits Window {
+    in-out property<int> counter: 42;
+    callback request-increase-value();
+
+    Example {}
+    Rectangle {
+        width: 300px;
+        height: 200px;
+        background: orange;
+        TabWidget {
+            width: 300px;
+            height: 200px;
+            Tab{
+                title: "Tab 1";
+                Rectangle {
+                    width: 300px;height: 100px;background: red;
+                }
+            }
+            Tab{
+                title: "Tab 2";
+                Rectangle {
+                    width: 300px;height: 100px;
+                }
+            }
+            Tab{
+                title: "Tab 3";
+                Rectangle {
+                    width: 300px;height: 100px;
+                }
+            }
+        }
+    }
+}
+*/

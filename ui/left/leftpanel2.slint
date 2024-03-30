@@ -1,0 +1,17 @@
+
+import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
+import { TabWidget } from "std-widgets.slint";
+export component LeftTab2 {
+    property<color> c1: #eeeeee;
+     TabWidget {
+        height: 150px;
+        Tab {
+            title: "Corpus";
+            Rectangle { background: c1; }
+        }
+        Tab {
+            title: "Datasets";
+            Rectangle { background: c1; }
+        }
+    }
+    }

@@ -1,0 +1,70 @@
+
+import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
+import {MyLogo} from "./logo.slint";
+import { Language } from "language.slint";
+export component MyTopMenu {
+    property <color> c1: #EEEEEE;
+    property <color> c2: #EEEEEE;
+    property <color> c3: #EEEEEE;
+    property <color> c4: #EEEEEE;
+    Rectangle {
+        background: c1;
+        height: 50px;
+        width: 100%;
+        HorizontalLayout {
+            alignment: stretch;
+            Rectangle {
+                background: c2;
+                width: 450px;
+                HorizontalLayout {
+                    alignment: start;
+                MyLogo { }
+                VerticalLayout {
+                    Rectangle {width: 10px;height: 6px;}
+                HorizontalBox {
+                   
+                Text {
+                    text: "File";
+                }
+
+                Text {
+                    text: "Analisi";
+                }
+
+                Text {
+                    text: "Impostazioni";
+                }
+
+                Text {
+                    text: "Info";
+                }
+            }
+                }
+            }
+            }
+
+            Rectangle {
+                background: c4;
+            horizontal-stretch: 1;
+            }
+            Rectangle {
+                background: c3;
+                width: 200px;
+                HorizontalBox {
+                    VerticalLayout {
+                        Rectangle {width: 10px;height: 6px;}
+                        Text {
+                            
+                            padding-top: 20px;
+                            text: "TalTac 4";
+                        }
+                           }
+  
+                Language { }
+            }
+            }
+
+            //   LeftTab { }
+        }
+    }
+}

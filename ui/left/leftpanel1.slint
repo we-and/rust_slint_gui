@@ -1,0 +1,43 @@
+
+import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
+import { TabWidget, ComboBox } from "std-widgets.slint";
+export component LeftTab {
+   Rectangle {
+    width: 310px;
+    height: 100%;
+    TabWidget {
+        padding: 0px;
+        height: 100%;
+        Tab {
+            padding: 0px;
+            title: "Sessioni";
+            Rectangle {
+                min-height: 200px;width: 200px;
+
+            VerticalBox {
+                Button {    text:"Crea una Nuova Sessione" ; }
+                Button {    text:"Cancella sessione" ; }
+                Text {    text:"Sessione:" ; }
+                ComboBox {
+                    model:      ["Session | 05-03-2024 10:35"];
+                    current-value:    "Session | 05-03-2024 10:35";
+                }
+                    Rectangle {}
+                }
+            }
+        }
+        Tab {
+            title: "Risorse";
+            Rectangle {
+                height: 200px;width: 200px;
+                background: pink; }
+        }
+        Tab {
+            title: "Mie Risorse";
+            Rectangle {
+                height: 200px;width: 200px;
+                background: pink; }
+        }
+    }
+}
+    }

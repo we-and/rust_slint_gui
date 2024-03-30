@@ -1,0 +1,11 @@
+import { ComboBox } from "std-widgets.slint";
+export component Language  {
+    
+    ComboBox {
+        y: 0px;
+        width: self.preferred-width;
+        height: self.preferred-height;
+        model: ["Italiano", "Inglese"];
+        current-value: "Italiano";
+    }
+}
