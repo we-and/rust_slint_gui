@@ -2,17 +2,15 @@
 import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
 import { TabWidget, ComboBox } from "std-widgets.slint";
 export component LeftTab {
-   Rectangle {
-    width: 310px;
+   // property<color> c1: #ff00ee;
+    Rectangle {
+       // background: c1;
+    width:100%;
     height: 100%;
-    TabWidget {
-        padding: 0px;
-        height: 100%;
-        Tab {
-            padding: 0px;
-            title: "Sessioni";
             Rectangle {
-                min-height: 200px;width: 200px;
+     //           background: c1;
+                min-height: 200px;
+                width:100%;
 
             VerticalBox {
                 Button {    text:"Crea una Nuova Sessione" ; }
@@ -25,19 +23,7 @@ export component LeftTab {
                     Rectangle {}
                 }
             }
-        }
-        Tab {
-            title: "Risorse";
-            Rectangle {
-                height: 200px;width: 200px;
-                background: pink; }
-        }
-        Tab {
-            title: "Mie Risorse";
-            Rectangle {
-                height: 200px;width: 200px;
-                background: pink; }
-        }
-    }
+        
+        
 }
     }

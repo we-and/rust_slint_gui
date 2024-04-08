@@ -1,0 +1,13 @@
+
+import { ListView } from "std-widgets.slint";
+
+export component MenuList  {
+ListView := Rectangle {
+    width: 200px;
+    height: auto;
+    ListView {
+     
+        for item in menu_items: Text { text: item.name }
+    }
+}
+}

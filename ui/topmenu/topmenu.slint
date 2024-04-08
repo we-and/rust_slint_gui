@@ -2,6 +2,7 @@
 import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
 import {MyLogo} from "./logo.slint";
 import { Language } from "language.slint";
+import { MyTopMenuFile } from "topmenu_file.slint";
 export component MyTopMenu {
     property <color> c1: #EEEEEE;
     property <color> c2: #EEEEEE;
@@ -26,7 +27,8 @@ export component MyTopMenu {
                 Text {
                     text: "File";
                 }
-
+                MyTopMenuFile {
+                }
                 Text {
                     text: "Analisi";
                 }

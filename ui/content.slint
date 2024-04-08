@@ -2,22 +2,50 @@
 import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
 import { Left } from "left/left.slint";
 import { Right } from "right/right.slint";
-
+import { TabWidget, ComboBox } from "std-widgets.slint";
 export component MyContent {
-    property <color> c2: #000ddd;
+  //  property <color> c2: #000ddd;
     Rectangle {
-        width: 100%;
-        background: c2;
-        HorizontalLayout {
-            width: 100%;
-            alignment: start;
-            Left {
-                height: 100%;width: 310px;
+        width: parent.width - 20px;
+        height: parent.height - 20px;
+        padding: 10px; 
+        y: 10px;
+        
+        TabWidget {
+            padding: 10px;
+            Tab {
+                padding: 20px;
+                title: "Sessioni";
+              //  property<color> c2: #ff0000;
+                Rectangle {
+                //    background: c2;
+                    min-height: 200px;
+                    HorizontalLayout {
+                        Left {
+                            
+                            height: 100%;width: 310px;
+                        }
+                        Right {}
+                    }
+                
+                }    
             }
-
-            Right {
-                width: 100%;
-             }
+            Tab {
+                title: "Risorse";
+                Rectangle {
+                    min-height: 200px;width:100%;
+                    background: green; }
+            }
+            Tab {
+                title: "Mie Risorse";
+                Rectangle {
+                    min-height: 200px;width:100%;
+                    background: pink; }
+            }
         }
+        
+        
+        
+        
     }
 }

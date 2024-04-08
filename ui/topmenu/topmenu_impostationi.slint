@@ -1,0 +1,78 @@
+
+import { Button, HorizontalBox,VerticalBox } from "std-widgets.slint";
+import {MyLogo} from "./logo.slint";
+import { Language } from "language.slint";
+export component MyTopMenuImpostationi inherits Window {
+        preferred-width: 80px;
+        preferred-height: 100px;
+        default-font-size: 24px;
+    
+        property <bool> show_submenu: false;
+        property <bool> is_hovered: false;
+        
+        main_menu_item := Rectangle {
+            width: 180px;
+            height: 30px;
+            color:  #eee ;
+            x: 0px;
+            y: 0px;
+    
+            // Text label for the main menu item
+            Text { width: main_menu_item.width;
+                height:main_menu_item.height;
+                x: 10px ;
+                text: "Impostationi";
+                horizontal-alignment: left;
+                vertical-alignment: center;
+            }
+    
+            // Detect clicks on the main menu item to toggle the submenu
+            ta:=TouchArea {
+               // anchors.fill: parent;
+                clicked => { show_submenu = !show_submenu; }
+            }
+        }
+        bg  := Rectangle {
+            width: main_menu_item.width;
+            height: main_menu_item.height;
+            color: #ffffff;
+            opacity: 0.3;
+            x: main_menu_item.x+0px;
+            y: main_menu_item.y+0px; // Position below the main menu item
+    
+            // Control visibility based on the show_submenu property
+            visible: is_hovered;
+    
+        }
+        // Submenu that appears when the main menu item is clicked
+        submenu := Rectangle {
+            width: 160px;
+            height: 100px;
+            color: #bbbbbb;
+            x: main_menu_item.x;
+            y: main_menu_item.height +  main_menu_item.y; // Position below the main menu item
+    
+            // Control visibility based on the show_submenu property
+            visible: show_submenu;
+    
+            // Example submenu item
+            Text {
+                text: "Submenu Item";
+                x: 10px;
+                y: 10px;
+            }
+        }
+ 
+        states [
+            hovered when ta.has-hover: {
+                is_hovered:true;
+                root.background: blue;
+
+            }
+            nothovered when !ta.has-hover: {
+                is_hovered:false;
+                root.background: green;
+            }
+        ]
+
+}

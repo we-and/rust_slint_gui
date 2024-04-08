@@ -1,15 +1,21 @@
+use generatemenu::generateMenu;
+
 slint::include_modules!();
+mod menu; // This tells Rust to load the code from `menu.rs` as a module.
+use menu::MenuItem; 
+
+pub mod generatemenu;
 
 fn main() -> Result<(), slint::PlatformError> {
+    let menu =generateMenu();
     let ui = AppWindow::new()?;
+//    ui.set_menu_items(menu);
+//ui.set_menu_items(slint::ModelRc::new(menu));
 
-    ui.on_request_increase_value({
-        let ui_handle = ui.as_weak();
-        move || {
-            let ui = ui_handle.unwrap();
-            ui.set_counter(ui.get_counter() + 1);
-        }
-    });
+//let ui_menu_items: Vec<UiMenuItem> = menu.iter().map(|item| item.to_ui_menu_item()).collect();
+ 
+//let model = slint::VecModel::from(ui_menu_items);
 
-    ui.run()
+//ui.set_menu_items(slint::ModelRc::new(model.clone()));
+ui.run()
 }
